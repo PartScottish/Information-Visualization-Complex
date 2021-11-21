@@ -1,0 +1,361 @@
+/*Styling the buttons*/
+.button {
+	background-color: #FFF8EF;
+	border: 1;
+	border-color: black;
+	color: #E67709;
+	padding: 5px 15px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 12px;
+}
+
+.button:active {
+  background-color: #E67709;
+  color: white;
+}
+
+.button:hover {
+  background-color: #F8AA5D;
+  color: white;
+}
+
+.button:focus {
+	background-color: #E67709;
+	color: white;
+}
+/*Styling the table*/
+#dataTable {
+  font-family: Helvetica, sans-serif;
+  border-collapse: collapse;
+  background-color: #FFF8EF;
+  font-size: 40;
+  width: 800;
+  color: #E67709;
+
+}
+
+#dataTable td, #dataTable th {
+  border: 1px solid #ffce9e;
+  padding: 8px;
+}
+
+#dataTable tr:nth-child(even){
+	background-color: #FFFFFF;
+}
+
+#dataTable tr:nth-child(odd){
+	background-color: #ffce9e;
+}
+
+#dataTable tr:nth-child(1){
+	background-color: #EF8700;
+	color: white;
+}
+
+#dataTable tr:hover {
+	background-color: #EF8700;
+	color: white;
+}
+
+#dataTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+/*Styling the body and scroll*/
+
+
+section{
+/*	height: 75vh;*/
+	scroll-snap-align: center;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+body{
+	font-family: 'Helvetica', sans-serif;
+
+}
+
+
+/*Styling the sections:*/
+#titleSec {
+	height: 30vh;
+	width:100%;
+	background-color: #FFF8EF;
+	align-items: top;
+	justify-content: top;
+}
+
+
+/*Styling the title texts*/
+.titleText {
+  position: absolute;
+  top: 4%;
+  text-transform: uppercase;
+  font-size: 55;
+  color: #E67709;
+
+}
+
+.titleP {
+	text-align: justify;
+	color: #E67709;
+	font-size: 30;
+	letter-spacing: 2px;
+	width: 800;
+	top: 13%;
+	position: absolute;
+
+}
+
+#my_dataviz{
+	display: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 50vh;
+}
+
+#mapButtons {
+	position: absolute;
+	height: auto;
+	top: 2%;
+}
+
+#mapSec{
+	position: relative;
+	padding-right: 275;
+	height: 70vh;	
+}
+
+
+
+#tableSec {
+	background-color: #FFF8EF;
+	top: 115%;
+	height: 50vh;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: 2px;
+	text-align: justify;
+
+}
+
+#graphSec{
+	position: relative;
+
+}
+
+#graphButtons{
+	align-self: top;
+	position: absolute;
+	top: 3%;
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	padding-left: 130;
+
+}
+
+#chart {
+	height: 70vh;
+}
+
+#chart.tickline {
+	visibility: hidden;
+}
+
+#graphText {
+	position: absolute;
+	top: 87%;
+	font-size: 20;
+	text-align: justify;
+	color: #E67709;
+}
+
+.sortButton {
+	background-color: #FFF8EF;
+	border: 1;
+	border-color: black;
+	color: #E67709;
+	padding: 5px 15px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 12px;
+}
+#sortButtons {
+	display: inline-block;
+	align-items: center;
+	position: absolute;
+	top: 93%;
+
+}
+
+.sortButton:active {
+  background-color: #E67709;
+  color: white;
+}
+
+.sortButton:hover {
+  background-color: #F8AA5D;
+  color: white;
+}
+
+.sortButton:focus {
+	background-color: #E67709;
+	color: white;
+}
+
+#pieSec {
+	background-color: #FFF8EF;
+	font-size: 25;
+}
+
+.pieText{
+	position: absolute;
+	font-size: 50;
+/*	color: #E67709;*/
+}
+
+.pieTextinner {
+	width: 100;
+}
+
+#pieButtons {
+	align-self: top;
+	position: absolute;
+	top: 260%;
+	display: inline-block;
+	width: 150;
+	left: 8%;
+}
+
+#pieChart {
+	height: 70vh;
+
+ }
+
+#pieErrorText {
+	color: red;
+}
+
+#pie_text {
+	position: absolute;
+	top: 293%;
+	font-size: 20;
+	text-align: justify;
+	color: #E67709;
+}
+
+#copySec {
+	height: 25vh;
+	width: 100%;
+	background-color: white;/*#FFF8EF*/
+}
+
+#copyright{
+	/*height: 25vh;*/
+	width:900;
+	align-items: center;
+	justify-content: center;
+	text-align: justify;
+	color: #E67709;
+	font-size: 30;
+	letter-spacing: 2px;
+	position: absolute;
+
+}
+
+#copyB {
+	height: 20vh;
+	align-items: bottom;
+	display: inline-block;
+	position: relative;
+}
+
+
+
+/*Styling the tooltips*/
+.tooltip {
+	position: fixed;
+	width: 225;
+	background-color: rgba(255,255,240, 0.8);
+	border-radius: auto;
+	pointer-events: all;
+	z-index: 1;
+}
+
+.tooltip.hidden {
+	display: none;
+}
+
+.tooltip p {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+
+#chart rect {
+	fill: darkorange;
+}
+#chart rect:hover {
+	fill: red;
+}
+
+#pieChart text:hover {
+	visibility: visible;
+}
+
+.slidecontainer {
+    width: 75%; /* Width of the outside container */
+    display: flex;
+    justify-content: center;
+  	font-size: 20;
+	text-align: justify;
+	color: #E67709;
+	padding-left: 200;
+
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 75%; 
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #E67709; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #E67709; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
