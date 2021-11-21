@@ -1,0 +1,113 @@
+<html>
+
+ <head>
+
+ 	<script src="https://d3js.org/d3.v4.js"></script>
+ 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+ 	<script src="https://d3js.org/d3-color.v2.min.js"></script>
+	<script src="https://d3js.org/d3-interpolate.v2.min.js"></script>
+	<script src="https://d3js.org/d3-scale-chromatic.v2.min.js"></script>
+	<script src="https://d3js.org/d3-scale.v3.min.js"></script>
+<!-- 	<script src="https://raw.githubusercontent.com/susielu/d3-legend/master/d3-legend.min.js"></script>
+	<script src="https://raw.githubusercontent.com/susielu/d3-legend/master/d3-legend.js"></script> -->
+	<script src="legend.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="styling.css" media="screen"/>
+
+	<title>d3 project</title>
+
+ </head>
+
+ <body>	
+ 	
+ 	<div class="-container">
+	 	<section id="titleSec">
+	 		<div class="titleText"> A Global View Of COVID-19 Statistics</div>
+	 		<div class="titleP">An insight into the COVID-19 driven statistics from around the globe. Visualizing a focus on national total cases and deaths, cases and deaths per 100,000 population and new cases and deaths in the last 24 hours.</div>
+	 	</section>
+
+
+
+
+	 	<section id="mapSec">
+
+	 		<svg id="my_dataviz"></svg>
+	 		<div id="mapButtons">
+				<button class="button" position="absolute" type="button" onclick="refreshData(0)">Cumulative Total Cases</button>
+				<button class="button" position="absolute" type="button" onclick="refreshData(1)"> Cumulative Total Deaths</button>  
+				<button class="button" position="absolute" type="button" onclick="refreshData(4)">Cases Per 100,000 Population</button>
+				<br/>
+				<button class="button" position="absolute" type="button" onclick="refreshData (5)">Deaths Per 100,000 Population</button>
+				<button class="button" position="absolute" type="button" onclick="refreshData (2)">New Cases In Last 24 Hours</button>
+				<button class="button" position="absolute" type="button" onclick="refreshData (3)">New Deaths In Last 24 Hours</button>
+			</div>
+				 <div id="tooltip"></div>						
+		</section>
+		
+		<section id="tableSec">
+			<div id="dataTable">Click a country from the map above for detailed information and statistics of their national COVID-19 data</div>
+		</section>
+
+
+		<section id="graphSec">
+			<svg id="chart"></svg>
+			<div id="sortButtons">
+				<button class="sortButton" onclick="sortGraph(sortAsc)">Sort Graph Asc</button>
+				<button class="sortButton" onclick="sortGraph(sortDesc)">Sort Graph Desc</button>
+			</div>
+			<div id="graphButtons">
+				<button class="button" position="absolute" type="button" onclick="refreshData(0)">Cumulative Total Cases</button>
+				<button class="button" position="absolute" type="button" onclick="refreshData(1)"> Cumulative Total Deaths</button>  
+				<button class="button" position="absolute" type="button" onclick="refreshData(4)">Cases Per 100,000 Population</button>
+				<br/>
+				<button class="button" position="absolute" type="button" onclick="refreshData (5)">Deaths Per 100,000 Population</button>
+				<button class="button" position="absolute" type="button" onclick="refreshData (2)">New Cases In Last 24 Hours</button>
+				<button class="button" position="absolute" type="button" onclick="refreshData (3)">New Deaths In Last 24 Hours</button>
+			</div>
+			<div id="tooltip"></div>
+			<div id="graphText">
+				<p>Hover over a bar for more information</p>
+			</div>
+			
+		</section>
+
+
+		<div class="slidecontainer">
+			<p>Use the slider to limit the number of countries displayed in the visualization above and below. The graphs will display the first selected for values in descending order. Limit to <=30 names to reveal x axis labels </p>
+		</div>
+		<div class="slidecontainer">
+  			<input type="range" min="1" max="100" value="50" class="slider" id="mySlider" onchange="limitResults(this.value)">
+		</div>
+
+
+		<section id="pieSec">
+			<div id="pieButtons">
+					<button class="button" position="absolute" type="button" onclick="refreshData(0)">Cumulative Total Cases</button>
+					<button class="button" position="absolute" type="button" onclick="refreshData(1)"> Cumulative Total Deaths</button>  
+					<br/>
+					<button class="button" position="absolute" type="button" onclick="refreshData (2)">New Cases In Last 24 Hours</button>
+					<button class="button" position="absolute" type="button" onclick="refreshData (3)">New Deaths In Last 24 Hours</button>
+			</div>
+			<svg id="pieChart"></svg>
+			<div id="pie_text">
+				<p>Click to apply a sticky label to the center of the pie chart. Click again to revert to hover labels or make a new sticky selection</p>
+			</div>
+		</section>
+
+		<section id="copySec">
+			<p id="copyright">This visualization was built using the D3 library for Javascript. The data provided for the visualizations was taken from The World Health Organization (WHO). Use the buttons above for source and credits</p>
+			<div id="copyB">
+				<button class="button" onclick="document.location='https://d3js.org/'">D3.JS</button>
+				<button class="button" onclick="document.location='https://covid19.who.int/'">WHO</button>
+			</div>
+
+		</section>
+	</div>
+
+	<script defer src = "dataselector.js"></script>
+	<script defer src = "app.js"></script>
+ 
+ </body>
+
+</html>
